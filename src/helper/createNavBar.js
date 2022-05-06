@@ -2,6 +2,7 @@
 const createNavigationBar = () => {
     const navBar = document.createElement("nav");
     navBar.classList.add("navigation-bar");
+
     navBar.innerHTML = `
         <ul>
             <li class="nav-item">

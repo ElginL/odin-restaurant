@@ -1,0 +1,20 @@
+.contacts-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    box-shadow: 0 0 4px 4px rgb(230, 220, 220);
+    background-color: black;
+    padding: 30px;
+    margin: 0 10% 90px 10%;
+}
+
+.contacts-container img {
+    width: 50%;
+    height: 50%;
+    
+}
+
+.contact-name {
+    font-size: 2rem;
+}

@@ -1,35 +1,50 @@
 import createMenuPage from './modules/menu';
 import generateMainPage from './modules/home';
+import generateContactPage from './modules/contact';
 import createNavBar from './helper/createNavBar';
 import createFooter from './helper/createFooter';
 
-const home = () => {
-    createNavBar();
-    generateMainPage();
-    createFooter();
+const resetScreen = () => {
+    const content = document.querySelector('#content');
+    content.innerHTML = ``;
+}
 
-    document.querySelector('#menu').addEventListener('click', (e) => {
-        e.preventDefault();
+const createNavBarWithListeners = () => {
+    createNavBar();
+
+    document.querySelector("#home").addEventListener('click', () => {
+        resetScreen();
+        home();
+    });
+    
+    document.querySelector("#contact").addEventListener('click', () => {
+        resetScreen();
+        contact();
+    });
+    
+    document.querySelector('#menu').addEventListener('click', () => {
         resetScreen();
         menu();
     });
 }
 
-const menu = () => {
-    createNavBar();
-    createMenuPage();
+const home = () => {
+    createNavBarWithListeners();
+    generateMainPage();
     createFooter();
-
-    document.querySelector("#home").addEventListener('click', (e) => {
-        e.preventDefault();
-        resetScreen();
-        home();
-    });
+  
 }
 
-const resetScreen = () => {
-    const content = document.querySelector('#content');
-    content.innerHTML = ``;
+const menu = () => {
+    createNavBarWithListeners();
+    createMenuPage();
+    createFooter();
+}
+
+const contact = () => {
+    createNavBarWithListeners();
+    generateContactPage();
+    createFooter();
 }
 
 // First load
