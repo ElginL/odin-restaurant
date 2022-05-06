@@ -1,24 +1,4 @@
-import './styles.css';
-
-// Creates and returns a navigation bar.
-const createNavigationBar = () => {
-    const navBar = document.createElement("nav");
-    navBar.classList.add("navigation-bar");
-    navBar.innerHTML = `
-        <ul>
-            <li class="nav-item">
-                <a class="nav-link" href="">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">Menu</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">Contact</a>
-        </ul>
-    `;
-
-    return navBar;
-}
+import '../styles/styles.css';
 
 const createMainCard = () => {
     // Name of the restaurant
@@ -96,29 +76,10 @@ const createMainCard = () => {
     return detailsCard;
 }
 
-// Creates the footer
-const createFooter = () => {
-    const container = document.createElement("footer");
-
-    container.innerHTML = `
-        <ul>
-            <li class="footer-text">Background image from Pixabay</li>
-            <li class="footer-text">Made By Elgin Lee</li>
-            <li class="footer-text">Webpack!</li>
-        </ul>
-    `;
-
-    return container;
-}
-
 const generateMainPage = () => {
     const mainContent = document.querySelector("#content");
     
-    mainContent.appendChild(createNavigationBar());
     mainContent.appendChild(createMainCard());
-    mainContent.appendChild(createFooter());
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    generateMainPage();
-});
+export default generateMainPage;

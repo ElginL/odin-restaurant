@@ -21,12 +21,14 @@
 }
 
 .nav-link:hover {
-    color: rgba(255, 255, 255, 0.5)
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
 }
 
-.food-section-container img {
+.food-images-list img {
     width: 300px;
     height: 300px;
+    margin: 10px;
 }
 
 .food-images-list {
@@ -34,10 +36,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-.food-images-list img {
-    margin: 10px;
 }
 
 .food-images-list > li {
